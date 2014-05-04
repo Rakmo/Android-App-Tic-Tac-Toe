@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TicTacToe By Rakmo</string>
+    <string name="action_settings">Settings</string>
+    <string name="new_game">New Game</string>
+    <string name="exit">Exit</string>
+    <string name="x_turn">X\'s Turn</string>
+    <string name="o_turn">O\'s Turn</string>
+
+</resources>

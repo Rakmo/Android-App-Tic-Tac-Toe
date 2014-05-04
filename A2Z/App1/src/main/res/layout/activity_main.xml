@@ -1,0 +1,199 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="rakmo.app1.MainActivity"
+    android:orientation="vertical"
+    android:layout_weight="12"
+    android:background="#111111">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/tictactoe"
+        android:layout_gravity="top"
+        android:layout_weight="0"/>
+
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerT"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    tools:context="rakmo.app1.MainActivity"
+        android:layout_weight="1"
+        android:layout_below="@+id/imageView1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="110dp"
+        android:layout_gravity="left|top"
+        android:weightSum="9"
+        android:visibility="visible">
+
+        <ImageButton
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:id="@+id/button1"
+            android:layout_weight="3"
+            android:clickable="true"
+            android:visibility="visible"
+            android:src="@drawable/blank_square"
+            android:layout_column="0"
+            android:onClick="playTicTacToe"/>
+
+        <ImageButton
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:id="@+id/button2"
+            android:layout_weight="3"
+            android:visibility="visible"
+            android:clickable="true"
+            android:src="@drawable/blank_square"
+            android:layout_column="1"
+            android:onClick="playTicTacToe"/>
+
+        <ImageButton
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:id="@+id/button3"
+            android:layout_weight="3"
+            android:clickable="true"
+            android:visibility="visible"
+            android:src="@drawable/blank_square"
+            android:layout_column="2"
+            android:onClick="playTicTacToe"/>
+    </TableRow>
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="110dp"
+        android:layout_gravity="left|top"
+        android:weightSum="9"
+        android:visibility="visible"
+        android:src="@drawable/blank_square">
+
+        <ImageButton
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:id="@+id/button4"
+            android:layout_weight="3"
+            android:visibility="visible"
+            android:clickable="true"
+            android:src="@drawable/blank_square"
+            android:layout_column="0"
+            android:onClick="playTicTacToe"/>
+
+        <ImageButton
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:id="@+id/button5"
+            android:layout_weight="3"
+            android:clickable="true"
+            android:visibility="visible"
+            android:src="@drawable/blank_square"
+            android:layout_column="1"
+            android:onClick="playTicTacToe"/>
+
+        <ImageButton
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:id="@+id/button6"
+            android:layout_weight="3"
+            android:clickable="true"
+            android:visibility="visible"
+            android:src="@drawable/blank_square"
+            android:layout_column="2"
+            android:onClick="playTicTacToe"/>
+    </TableRow>
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="110dp"
+        android:layout_gravity="left|top"
+        android:weightSum="9">
+
+        <ImageButton
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:id="@+id/button7"
+            android:layout_weight="3"
+            android:clickable="true"
+            android:visibility="visible"
+            android:src="@drawable/blank_square"
+            android:layout_column="0"
+            android:onClick="playTicTacToe"/>
+
+        <ImageButton
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:id="@+id/button8"
+            android:layout_weight="3"
+            android:clickable="true"
+            android:visibility="visible"
+            android:src="@drawable/blank_square"
+            android:layout_column="1"
+            android:onClick="playTicTacToe"/>
+
+        <ImageButton
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:id="@+id/button9"
+            android:layout_weight="3"
+            android:clickable="true"
+            android:visibility="visible"
+            android:src="@drawable/blank_square"
+            android:layout_column="2"
+            android:onClick="playTicTacToe"/>
+    </TableRow>
+
+</TableLayout>
+
+
+    <Button
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:clickable="true"
+
+        android:text="@string/new_game"
+        android:textSize="@dimen/btnTxtSize"
+        android:typeface="sans"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/btnNewGame"
+        android:layout_alignParentEnd="false"
+        android:onClick="playNewGame"
+        android:layout_alignTop="@id/btnExit" />
+
+    <Button
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:clickable="true"
+        android:text="@string/exit"
+        android:textSize="@dimen/btnTxtSize"
+        android:typeface="sans"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@id/btnExit"
+        android:onClick="doExit"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/x_turn"
+        android:id="@+id/txtTurn"
+        android:textColor="#FFFFFF"
+        android:layout_above="@+id/btnNewGame"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/txtTurnSize"/>
+
+</RelativeLayout>
